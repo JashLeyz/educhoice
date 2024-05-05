@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="EI=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/style.css" />
+
+
+
+  <title>EduChoice</title>
+</head>
+
+<style>
+  body {
+    background-image: url('https://images49.fotki.com/v1679/photos/9/1816109/13502571/ngscienceabstractscienceabstra-vi.jpg');
+   
+    /* Prevents vertical repeating */
+    margin: 0;
+    /* Reset default margin for body */
+    padding: 0;
+    /* Reset default padding for body */
+  }
+</style>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="/index.html">EduChoice</a></div>
+      <ul class="links">
+
+        <li><a href="/ia/ia.html">Industrial Art</a></li>
+        <li><a href="/cook/cook.html">Cookery</a></li>
+        <li><a href="/agri/agri.html">Agriculture</a></li>
+        <li><a href="/ict/ict.html">ICT</a></li>
+      </ul>
+
+      <a href="/about/about.html" class="action_btn">About</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+
+      <div class="dropdown_menu">
+        <ul>
+          <li><a href="/ia/ia.html">Industrial Art</a></li>
+          <li><a href="/cook/cook.html">Cookery</a></li>
+          <li><a href="/agri/agri.html">Agriculture</a></li>
+          <li><a href="/ict/ict.html">ICT</a></li>
+          <li><a href="/about/about.html" class="action_btn">About</a></li>
+        </ul>
+      </div>
+
+
+
+  </header>
+
+  <main>
+    <section id="home">
+
+      <h2 class="fw-bold text-center container ">What is TLE 9?</h2>
+
+      <h2 class="fw-bold text-center container">Welcome to TLE 9 Class!</h2>
+
+      <p class="text-muted container">  Technology and Livelihood Education is a subject where student enhance their
+        technical skills in that will help to their everyday activities at home.</p>
+
+
+      <h2 class="fw-bold container">What is the TLE subject all about?</h2>
+      <p class="text-muted container">Technology and Livelihood Education (TLE) is one of the learning areas of the
+        Secondary Education Curriculum used in Philippine secondary schools. As a subject in high school, its component
+        areas are: Home Economics, Agri-Fishery Arts, Industrial Arts, and Information and Communication Technology.</p>
+
+
+      <h2 class="fw-bold container">TLE equips technological literacy</h2>
+      <p class="text-muted container">It teaches about the development of technology, particularly as it relates to
+        computers and machines. ICT focuses on more than just computers and technology; it also allows one to hone their
+        planning, evaluation, monitoring, problem-solving, and decision-making abilities.
+      <p>
+      <h3 class="fw-bold container">How do you apply your learnings in TLE to your everyday life?</h2>
+        <p class="text-muted container">For instance, you can learn basic programming languages that can help you create
+          apps, websites, and many other things in the technology industry. You can also apply TLE in your daily life by
+          developing your entrepreneurship skills.</p>
+
+
+        <h2 class="fw-bold container">How does technology and livelihood help us in our everyday living?</h2>
+        <p class="text-muted container">Technology and Livelihood Education can give students a source of money to earn
+          a decent living. Through Dressmaking, Electrical Installation and Maintenance, Commercial Cooking,
+          Housekeeping, Electronics Servicing, and Food Processing courses, graduates can apply and get jobs to support
+          their needs.</p>
+
+        <h2 class="fw-bold container">What is the main goal of TLE?</h2>
+        <p class="text-muted container">In line with the school's vision and mission, the TLE Department aims to develop
+          critical thinking, self-reliance, independence, culture sensitivity and entrepreneurship in the students by
+          enhancing their skills on the different uses of technology and application of life skills.</p>
+
+
+        <h2 class="fw-bold container">What is TLE and its importance in education?</h2>
+        <p class="text-muted container">Technology and Livelihood Education (TLE) is one of the learning areas of the
+          Secondary Education Curriculum used in Philippine secondary schools. As a subject in high school, its
+          component areas are: Home Economics, Agri-Fishery Arts, Industrial Arts, and Information and Communication
+          Technology.</p>
+
+
+
+
+
+
+  </main>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open');
+      const isOpen = dropDownMenu.classList.contains('open');
+
+      toggleBtnIcon.className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
+
+
+      const aboutLink = document.querySelector('.dropdown_menu .action_btn');
+      if (isOpen) {
+        aboutLink.style.display = 'block';
+      } else {
+        aboutLink.style.display = 'none';
+      }
+    };
+  </script>
+</body>
+
+</html>

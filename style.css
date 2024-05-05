@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #fff;
+  /*background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsb2ZmaWNlM19zaW1wbGVfbWluaW1hbGlzdF9waG90b19vZl9tb3VudGFpbl9hbmRfbW9vbl9pbl8zNTcwMjM0My1jM2FjLTRlZmItYjgyNS1lMTIwNmYwYTAwNWVfMS5qcGc.jpg");url("https://w0.peakpx.com/wallpaper/700/152/HD-wallpaper-mountains-in-dark-night-background-dark.jpg")*/
+  background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+    
+}
+
+a:hover {
+  color: orange;  
+}
+
+/*header*/
+header {
+  position: relative;
+ /* padding: 0 2rem;  */
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  /* max-width: 1200px; */
+  /*margin: 0 auto;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px;
+}
+/*.logo{
+  margin-left: 20px;
+  
+}*/
+.toggle_btn{
+  padding: 20px;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: black;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+/*DROPDOWN MENU ORIG*/
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  /* height: 700px; */
+  background: rgba(255, 255, 255, 0.1);
+ /* border-radius: hidden;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
+blurred effect */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+
+/*DROPDOWN MENU
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  background-filter: blur(20px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}*/
+
+.dropdown_menu.open {
+  height: 240px;
+  
+  
+  
+}
+
+.dropdown_menu li {
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/*home*/
+section#home {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;
+  justify-content: center;
+  text-align: center;*/
+  /*color: #fff;*/
+  margin-top: 100px;
+  margin: 30px;
+}
+#home h1 {
+  /*font-size: 2rem;*/
+  text-align: center;
+  /* margin: 1.5rem; */
+  color: white;
+  background: rgba(24, 1, 1, 0.850);  
+}
+
+h2{
+  /*color: darkgray;*/
+  margin: 1.5rem;
+  text-height: 1.5rem;
+  color: white;
+  background: rgba(24, 1, 1, 0.850);
+  text-align: center;
+
+}
+
+h3{
+  /*color: darkgray;*/
+  margin: 1.5rem;
+  text-height: 1.5rem;
+  color: white;
+  background: rgba(24, 1, 1, 0.850);
+  text-align: center;
+
+}
+p{
+  /*color: darkgray;*/
+  margin: 20px;
+  color: white;
+  /* font-weight: bold; */
+  background: rgba(24, 1, 1, 0.850);
+  text-align: center;
+}
+
+.container {
+    border: 1px solid lightgray;
+    padding: 10px;
+    /* background: lightgray; */
+    /* border-lenght: auto; */
+    border-radius: .5rem;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container p {
+    /* color: black; */
+    /* text-align: center; */
+}
+
+/*RESPONSIVE DESIGN*/
+@media(max-width: 992px){
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+
+    backdrop-filter: blur(20px);
+
+    li{
+  font-weight: bold;
+}
+
+.navbar-cook{
+  background-color: #a65329;
+  width: 100vw;
+  
+}
+.link-cook{
+  color: black;
+}
+  }
+  
+}
+
+@media(max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+    
+    backdrop-filter: blur(20px);
+    /* height: 30vh; */
+    
+  }
+li{
+  font-weight: bold;
+  /* margin: none; */
+}
+
+.navbar-cook{
+  background-color: #a65329;
+  width: 100vw;
+  
+}
+.navbar{
+
+}
+.link-cook{
+  color: black;
+}
+}
+
+
+/*.blur-background {
+  filter: blur(5px); /* Adjust the blur amount as needed 
+}*/
+
+
+/*.dropdown_menu ul li a {
+  border: 1px solid orange;
+  border-radius: 20px;
+  /*padding: 10px;
+  /*margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+*/
+/*.container {
+  display: flex;
+  justify-content: center;
+}*/
+
+
+.responsive-div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .responsive-div img {
+      max-width: 100%;
+      height: auto;
+      width: 100px;
+      transition: all 0.5s ease;
+    }
+    .responsive-div img.active {
+      width: 400px;
+    }
+
+
+.disclaimer {
+  /* background-color: lightgray; */
+  padding: 20px;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  text-align: center;
+  color: white;
+}
+
+.modules {
+  border: 1px solid darkblue;
+  border-color: transparent;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 50px;
+  text-align: center;
+  
+}
+
+/*Cookery*/
+.navbar-cook{
+  background-color: #a65329;
+  /* width: 100vw; */
+
+}
+
+li{
+  margin-bottom: .5rem;
+}
+.links{
+  display: flex;
+  /* outline: auto; */
+  height: 100%;
+  align-items: center;
+}
+.logo{
+  display: flex;
+  height: 100%;
+  /* outline: auto; */
+  align-items: center;
+  margin-top: none;
+}
+.dropdown_menu > ul{
+  margin: none;
+}
