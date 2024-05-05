@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  
+  <style>
+     body {
+    background-image: url('https://images49.fotki.com/v1679/photos/9/1816109/13502571/ngscienceabstractscienceabstra-vi.jpg');
+   
+    /* Prevents vertical repeating */
+    margin: 0;
+    /* Reset default margin for body */
+    padding: 0;
+    /* Reset default padding for body */
+  }
+  </style>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="EI=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" 
+  />   
+    <link rel="stylesheet" href="/style.css" />
+  <title>About</title>
+</head>
+<body>
+  <header>
+     <div class="navbar">
+       <div class="logo"><a href="/index.html">EduChoice</a></div>
+       <ul class="links">
+         
+         <li><a href="/ia/ia.html">Industrial Art</a></li>
+         <li><a href="/cook/cook.html">Cookery</a></li>
+         <li><a href="/agri/agri.html">Agriculture</a></li>
+         <li><a href="/ict/ict.html">ICT</a></li>
+       </ul>
+     
+    <a href="/about/about.html" class="action_btn">About</a>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+       
+       <div class="dropdown_menu">
+         <ul>
+           <li><a href="/ia/ia.html">Industrial Art</a></li>
+           <li><a href="/cook/cook.html">Cookery</a></li>
+           <li><a href="/agri/agri.html">Agriculture</a></li>
+           <li><a href="/ict/ict.html">ICT</a></li>
+           <li><a href="/about/about.html" class="action_btn">About</a></li>
+         </ul>
+       </div>
+
+
+    
+   </header> 
+
+  <main>
+    <section id="home">
+      <!-- <h3 class="fw-bold text-center container">References<h3> -->
+
+       <!-- <div><li><a href="#">Jan 28, 2023
+https://www.pressreader.com › sun...</a></li></div>
+        <div><li><a href="#">Jun 4, 2017
+https://www.pressreader.com › sunst...</a></li></div>
+        <div><li><a href="#">May 11, 2019
+https://adzu.edu.ph › technology-an...
+Technology and Livelihood Education (TLE) Department</a></li></div>
+        <div><li><a href="#">https://en.m.wikipedia.org › wiki</a></li></div> -->
+        
+        <div class="container disclaimer">
+  This information is provided for research purposes only. We do not claim ownership of the information presented.
+</div>
+
+      
+  </main>
+
+    <script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open');
+      const isOpen = dropDownMenu.classList.contains('open');
+
+      toggleBtnIcon.className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
+
+      // Add this block to show/hide the "About" button in the dropdown menu
+      const aboutLink = document.querySelector('.dropdown_menu .action_btn');
+      if (isOpen) {
+        aboutLink.style.display = 'block';
+      } else {
+        aboutLink.style.display = 'none';
+      }
+    };
+      </script>
+  
+</body>
+</html>
